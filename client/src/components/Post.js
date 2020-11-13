@@ -1,18 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function Post({ content, createdAt, id }) {
-  return (
-    <div className="col-10 col-md-8 col-lg-7">
-      <div className="card mb-4 shadow">
-        <div className="card-body card-text">
-          <Link to={"/posts/"+id}>{ content }</Link>
-        </div>
-        <div className="card-footer small text-muted text-right">
-          { createdAt }
-        </div>
-      </div>
-    </div>
+function Post({name,description,id,image}) {
+  const inline ={    
+    height: "200px",
+  };
+  return (      
+        <div className="col-sm-4 p-3">
+        <div className="card card-body" style={{height:"380px"}} >
+          <img src={image} style={inline} className="card-img-top mb-3" alt="Header Image"/>
+          <div className="card-title">
+            <Link to={"/posts/"+id}>{ name }</Link>
+          </div>
+          <div className="card-text">
+            { description }
+          </div>
+        </div>              
+        </div>     
   );
 }
 

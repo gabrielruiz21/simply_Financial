@@ -10,6 +10,7 @@ import PostsListPage from './pages/PostsListPage';
 import PostFormPage from './pages/PostFormPage';
 import ShowPostPage from './pages/ShowPostPage';
 import AboutUsPage from './pages/AboutUsPage';
+import logo from '../src/logo.svg';
 
 import './App.css';
 
@@ -17,11 +18,16 @@ import './App.css';
 function Navigation(props) {
   return (
     <nav className="navbar navbar-expand-sm navbar-dark bg-dark shadow mb-3">
-      <Link className="navbar-brand" to="/">Micro Blog</Link>
+      <img src={logo} className="navbar-brand" alt="Logo of the company" width="40px"/>
       <ul className="navbar-nav mr-auto">
+      <li className="nav-item">
+          <NavLink className="nav-link" exact to="/">
+            Home
+          </NavLink>
+        </li>
         <li className="nav-item">
           <NavLink className="nav-link" exact to="/posts/new">
-            Create a Micro Post
+            Learning center
           </NavLink>
         </li>
         <li className="nav-item">
@@ -29,6 +35,7 @@ function Navigation(props) {
             About Us
           </NavLink>
         </li>
+        
       </ul>
     </nav>
   );

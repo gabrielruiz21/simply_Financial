@@ -1,5 +1,5 @@
 import React from 'react';
-import Post from '../components/Post';
+import PostFullPage from '../components/PostFullPage';
 import Loading from '../components/Loading';
 import { Redirect } from 'react-router-dom';
 
@@ -16,7 +16,7 @@ class ShowPostPage extends React.Component {
       .then(res => res.json())
       .then(post => {
         this.setState({
-          post: <Post {...post} />,
+          post: <PostFullPage {...post} />,
           loading: false,
         });
       })
