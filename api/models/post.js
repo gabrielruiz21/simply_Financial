@@ -1,10 +1,8 @@
 'use strict';
 const { Model } = require('sequelize');
 
-
 module.exports = (sequelize, DataTypes) => {
   class Post extends Model {}
-
   Post.init({
     name:{
       type: DataTypes.STRING,
@@ -35,9 +33,10 @@ module.exports = (sequelize, DataTypes) => {
     sequelize,
     modelName: 'post'
   });
+  
 
   Post.associate = (models) => {
-    // associations can be defined here
+    models.Post.hasMany(models.Section)
   };
 
   return Post;

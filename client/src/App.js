@@ -17,10 +17,10 @@ import './App.css';
 
 function Navigation(props) {
   return (
-    <nav className="navbar navbar-expand-sm navbar-dark bg-dark shadow mb-3">
-      <img src={logo} className="navbar-brand" alt="Logo of the company" width="40px"/>
+    <div>
+    <nav className="navbar navbar-expand-sm navbar-light shadow mb-3" style={{backgroundColor: "#F1E0B0"}}>
       <ul className="navbar-nav mr-auto">
-      <li className="nav-item">
+        <li className="nav-item">
           <NavLink className="nav-link" exact to="/">
             Home
           </NavLink>
@@ -35,9 +35,13 @@ function Navigation(props) {
             About Us
           </NavLink>
         </li>
-        
       </ul>
+      <div className="" style={{marginRight:"50vw"}} >
+    <img src={logo} className="" alt="Logo of the company" width="40px"/>
+    </div>     
     </nav>
+    
+    </div>
   );
 }
 
