@@ -10,7 +10,6 @@ module.exports = (sequelize, DataTypes) => {
         notEmpty: true,
       }
     },
-
   }, 
   {
     sequelize,

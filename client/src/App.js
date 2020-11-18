@@ -3,7 +3,7 @@ import {
   BrowserRouter as Router, 
   Switch, 
   Route, 
-  Link,
+  
   NavLink
 } from 'react-router-dom';
 import PostsListPage from './pages/PostsListPage';
@@ -13,7 +13,6 @@ import AboutUsPage from './pages/AboutUsPage';
 import logo from '../src/logo.svg';
 
 import './App.css';
-
 
 function Navigation(props) {
   return (
@@ -51,13 +50,13 @@ class App extends React.Component {
     return (
         <Router>
           <Navigation />
-          <div className="container-fluid text-center">
+          <div>
             <div className="row justify-content-center">
               <Switch>
-                <Route path="/posts/new" component={PostFormPage} />
+                <Route path="/posts/new" component={PostsListPage} />
                 <Route path="/posts/:id" component={ShowPostPage} />
                 <Route path="/about-us" component={AboutUsPage} />
-                <Route path="/" component={PostsListPage} />
+                <Route path="/" component={PostFormPage} />
               </Switch>
             </div>
           </div>

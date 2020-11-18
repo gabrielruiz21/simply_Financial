@@ -25,17 +25,21 @@ router.get('/', (req,res) => {
 
 
 router.post('/', (req, res) => {
-  let { content } = req.body;
-  
-  Post.create({ content })
+  let { name,description,image,content } = req.body;
+  Post.create({ name,description,image,content})
     .then(post => {
       res.status(201).json(post);
+      association(post.id, content)
     })
     .catch(err => {
       res.status(400).json(err);
     });
 });
 
+function association (postId,content){
+  let id = postId
+  Section.create({id,content,postId})
+}
 
 router.get('/:id', (req, res) => {
   const { id } = req.params;

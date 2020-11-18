@@ -1,22 +1,22 @@
 import React from 'react';
+import '../../src/App.css'
+import Carousel from 'react-elastic-carousel'
+import Item from "./item";
 
+let text = "bbvbcxbvnbxcvbbvbvbjkdsdsbjskdbvjkdbvjkbsdjbvsdbvkjbsdlvbsdvs vfbdsnvbnbvbvhdvjhb sdlvgb sdkgbv sdjkvghsd sdghv sdvjkhsdh svgsjgvgvgdfvbncbvbfdvblfdvgbkjdfvblfb gv gkj sdkbsdb dsg dsbv dsbv jkds sldgv dsg "
 function AboutUsPage(props) {
+
   return (
-<div class="container">
-  <div class="row ">
-    <div class="card mb-4 shadow">.col-md-4</div>
-    <div class="col-md-4">.col-md-4</div>
-    <div class="col-md-4 ml-auto">.col-md-4 .ml-auto</div>
-  </div>
-  <div class="row">
-    <div class="col-md-3 ml-md-auto">.col-md-3 .ml-md-auto</div>
-    <div class="col-md-3 ml-md-auto">.col-md-3 .ml-md-auto</div>
-  </div>
-  <div class="row">
-    <div class="col-auto mr-auto">.col-auto .mr-auto</div>
-    <div class="col-auto">.col-auto</div>
-  </div>
-</div>  );
+<Carousel itemsToShow={1}>
+  <Item>{text}</Item>
+  <Item>2</Item>
+  <Item>3</Item>
+  <Item>4</Item>
+  <Item>5</Item>
+  <Item>6</Item>
+</Carousel>
+   );
 }
 
 export default AboutUsPage;
+

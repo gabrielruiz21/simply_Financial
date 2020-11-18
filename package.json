@@ -17,6 +17,9 @@
     "morgan": "^1.10.0",
     "pg": "^8.4.1",
     "pg-hstore": "^2.3.3",
+    "react-elastic-carousel": "^0.9.5",
+    "react-text-carousel": "^0.1.1",
+    "react-typist": "file:node_modules/react-typist",
     "sequelize": "^5.22.3",
     "sqlite3": "^4.2.0"
   },
