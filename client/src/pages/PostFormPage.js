@@ -69,7 +69,7 @@ class PostFormPage extends React.Component {
   }
 
   render() {
-    if(this.state.success) return <Redirect to="/" />;
+    if(this.state.success) return <Redirect to="/posts/new" />;
 
     let errorMessage = null;
     if(this.state.error) {
