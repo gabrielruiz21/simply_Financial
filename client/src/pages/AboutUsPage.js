@@ -1,34 +1,38 @@
-import React from "react";
+import React, { Component } from 'react'
+import Quiz from '../components/Quiz';
+import Loading from '../components/Loading'
 
+export default class AboutUsPage extends Component {
+  state = {
+    quizzes: [],
+    loading: true,
+  }
 
-function AboutUsPage(props) {
-  console.log(props)
-  return (
-    <div>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-  Launch demo modal
-</button>
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+  componentDidMount() {
+    
+    fetch("/api/quizzes")      
+      .then(res =>res.json())
+      .then(quizzs => {
+        console.log(quizzs)
+        this.setState({
+          loading: false,
+          quizzes: quizzs.map((p,ii) => <Quiz {...p} key={ii} />),
+        });        
+      })
+      .catch(err => console.log("API ERROR: ", err));
+  }
+
+  render() {
+    if(this.state.loading) {
+      return <Loading />;
+    }
+
+    return (
+      <div className="container-fluid" style={{width:"90%"}}>
+        <div className="row">
+          { this.state.quizzes}
+        </div>
       </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-  );
+    );
+  }
 }
-
-export default AboutUsPage;

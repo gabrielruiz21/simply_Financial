@@ -56,10 +56,8 @@ decreaseProgressBar = () =>{
 //good
 changeButtonFunction = () =>{     
     this.setState(state =>{
-      console.log("Current index:" + state.currentIndex + "Array lenght : " + state.textArray.length) 
-      console.log("end lesson is " + state.endLesson)
       if (state.currentIndex === state.textArray.length)
-        return {buttonName:"Quiz",
+        return {buttonName:"Finish",
                 dataValue: "modal",
                 targetValue: "#exampleModalCenter"
               }              
@@ -70,10 +68,7 @@ changeButtonFunction = () =>{
               }     
     })
 }
-
-
   render() {
-  
   const inlineImage ={
     width: "1fr",       
     height: "1fr",
@@ -95,28 +90,28 @@ changeButtonFunction = () =>{
           </div>
           <div className="card-footer text-muted text-center">          
           <div className="float-right">
-           <button className="btn btn-success" onClick={() =>{this.nextContent(); this.increaseProgressBar()}} data-toggle={this.state.dataValue} data-target={this.state.targetValue}>{this.state.buttonName}</button>
-           {/* Modal */}
-           <div className="modal fade" id="exampleModalCenter" tabIndex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <button className="btn btn-success" onClick={() =>{this.nextContent(); this.increaseProgressBar()}} data-toggle={this.state.dataValue} data-target={this.state.targetValue}>{this.state.buttonName}</button>
+          </div>
+          {/* Modal */}
+          <div className="modal fade" id="exampleModalCenter" tabIndex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
               <div className="modal-dialog modal-dialog-centered" role="document">
                 <div className="modal-content">
                   <div className="modal-header">
-                    <h5 className="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                    <h5 className="modal-title" id="exampleModalLongTitle">Congratulations</h5>
                     <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
                   </div>
                   <div className="modal-body">
-                    ...
+                    Always believe in yourself even when it’s not easy
                   </div>
                   <div className="modal-footer">
-                    <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" className="btn btn-primary">Save changes</button>
+                    <button type="button" className="btn btn-secondary" data-dismiss="modal">Lessons</button>
+                    <button type="button" className="btn btn-success">Quiz</button>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
           <div>
             <button className="btn btn-success ml-4" onClick={() =>{this.prevContent();this.decreaseProgressBar()}}  disabled={!this.state.index}>Back</button>
           </div>

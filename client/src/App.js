@@ -13,6 +13,7 @@ import AboutUsPage from './pages/AboutUsPage';
 import logo from '../src/logo.svg';
 
 import './App.css';
+import ShowQuizPage from './pages/ShowQuizPage';
 
 function Navigation(props) {
   return (
@@ -56,6 +57,7 @@ class App extends React.Component {
                 <Route path="/posts/new" component={PostsListPage} />
                 <Route path="/posts/:id" component={ShowPostPage} />
                 <Route path="/about-us" component={AboutUsPage} />
+                <Route path="/quizzes/:id" component={ShowQuizPage}/>
                 <Route path="/" component={PostFormPage} />
               </Switch>
             </div>
