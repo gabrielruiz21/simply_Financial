@@ -1,35 +1,40 @@
 {
-  "name": "api-backend",
-  "version": "1.0.0",
-  "description": "An api backend",
-  "main": "index.js",
-  "scripts": {
-    "start": "node api/app.js",
-    "dev": "nodemon -r dotenv/config api/app.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "cd client && npm install && npm run build"
-  },
-  "author": "Edgardo Molina",
-  "license": "ISC",
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1",
-    "morgan": "^1.10.0",
-    "pg": "^8.4.1",
-    "pg-hstore": "^2.3.3",
+    "npm":"^6.14.8",
+    "node":"^14.15.0",
+    "bootstrap": "^4.5.3",
+    "react": "^16.10.1",
+    "react-bootstrap": "^1.4.0",
+    "react-dom": "^16.10.1",
     "react-elastic-carousel": "^0.9.5",
-    "react-text-carousel": "^0.1.1",
-    "react-typist": "file:node_modules/react-typist",
-    "sequelize": "^5.22.3",
-    "sqlite3": "^4.2.0"
+    "react-responsive-modal": "^6.0.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.3",
+    "react-text-carousel": "^0.1.1"
   },
-  "devDependencies": {
-    "dotenv": "^8.2.0",
-    "nodemon": "^1.19.4"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "nodemonConfig": {
-    "ignore": [
-      "client/"
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
     ]
-  }
+  },
+  "proxy": "http://localhost:8080"
 }
