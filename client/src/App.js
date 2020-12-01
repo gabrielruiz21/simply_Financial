@@ -6,6 +6,7 @@ import {
   
   NavLink
 } from 'react-router-dom';
+import HomePage from './pages/HomePage';
 import PostsListPage from './pages/PostsListPage';
 import PostFormPage from './pages/PostFormPage';
 import ShowPostPage from './pages/ShowPostPage';
@@ -21,7 +22,7 @@ function Navigation(props) {
     <nav className="navbar navbar-expand-sm navbar-light shadow mb-3" style={{backgroundColor: "#F1E0B0"}}>
       <ul className="navbar-nav mr-auto">
         <li className="nav-item">
-          <NavLink className="nav-link" exact to="/">
+          <NavLink className="nav-link" exact to="/home">
             Home
           </NavLink>
         </li>
@@ -54,6 +55,7 @@ class App extends React.Component {
           <div>
             <div className="row justify-content-center">
               <Switch>
+                <Route path="/home" component={HomePage} />
                 <Route path="/posts/new" component={PostsListPage} />
                 <Route path="/posts/:id" component={ShowPostPage} />
                 <Route path="/about-us" component={AboutUsPage} />
