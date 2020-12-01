@@ -2,21 +2,21 @@
 const { Model } = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
-  class Post extends Model {}
-  Post.init({
-    name:{
+  class Quiz extends Model {}
+  Quiz.init({
+    topic:{
       type: DataTypes.STRING,
       validate: {        
         notEmpty: true,
       }
     },
-    description: {
+    image: {
       type: DataTypes.STRING,
       validate: {        
         notEmpty: true,
       }
     },    
-    image:{
+    description:{
       type: DataTypes.STRING,
       validate: {        
         notEmpty: true,
@@ -25,14 +25,14 @@ module.exports = (sequelize, DataTypes) => {
 
   }, {
     sequelize,
-    modelName: 'post'
+    modelName: 'quiz'
   });
   
 
-  Post.associate = (models) => {
-    models.Post.hasMany(models.Section)
-    models.Post.hasMany(models.Quiz)
+  Quiz.associate = (models) => {
+    models.Quiz.hasMany(models.QuizSection);
+    models.Quiz.belongsTo(models.Post);
   };
 
-  return Post;
+  return Quiz;
 };

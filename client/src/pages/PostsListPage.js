@@ -10,16 +10,13 @@ class PostsListPage extends React.Component {
   }
 
   componentDidMount() {
-    fetch("/api/posts")
-      
-      .then(res =>res.json())
-      
+    fetch("/api/posts")      
+      .then(res =>res.json())      
       .then(posts => {
         this.setState({
           loading: false,
           posts: posts.map((p,ii) => <Post {...p} key={ii} />),
-        });
-        
+        });        
       })
       .catch(err => console.log("API ERROR: ", err));
   }
@@ -30,10 +27,9 @@ class PostsListPage extends React.Component {
     }
 
     return (
-      <div className="container-fluid text-center">
-        <div className="row justify-content-center">
+      <div className="container-fluid" style={{width:"90%"}}>
+        <div className="row">
           { this.state.posts }
-          {console.log()}
         </div>
       </div>
     );

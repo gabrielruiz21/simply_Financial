@@ -1,22 +1,38 @@
-import React from 'react';
+import React, { Component } from 'react'
+import Quiz from '../components/Quiz';
+import Loading from '../components/Loading'
 
-function AboutUsPage(props) {
-  return (
-<div class="container">
-  <div class="row ">
-    <div class="card mb-4 shadow">.col-md-4</div>
-    <div class="col-md-4">.col-md-4</div>
-    <div class="col-md-4 ml-auto">.col-md-4 .ml-auto</div>
-  </div>
-  <div class="row">
-    <div class="col-md-3 ml-md-auto">.col-md-3 .ml-md-auto</div>
-    <div class="col-md-3 ml-md-auto">.col-md-3 .ml-md-auto</div>
-  </div>
-  <div class="row">
-    <div class="col-auto mr-auto">.col-auto .mr-auto</div>
-    <div class="col-auto">.col-auto</div>
-  </div>
-</div>  );
+export default class AboutUsPage extends Component {
+  state = {
+    quizzes: [],
+    loading: true,
+  }
+
+  componentDidMount() {
+    
+    fetch("/api/quizzes")      
+      .then(res =>res.json())
+      .then(quizzs => {
+        console.log(quizzs)
+        this.setState({
+          loading: false,
+          quizzes: quizzs.map((p,ii) => <Quiz {...p} key={ii} />),
+        });        
+      })
+      .catch(err => console.log("API ERROR: ", err));
+  }
+
+  render() {
+    if(this.state.loading) {
+      return <Loading />;
+    }
+
+    return (
+      <div className="container-fluid" style={{width:"90%"}}>
+        <div className="row">
+          { this.state.quizzes}
+        </div>
+      </div>
+    );
+  }
 }
-
-export default AboutUsPage;
