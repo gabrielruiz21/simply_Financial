@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom';
 
 export default class QuizFullPage extends Component {
     state={
@@ -12,6 +13,11 @@ export default class QuizFullPage extends Component {
         answers: this.props.quizSections.map((object) => object.answer),
         dataValue: "",
         targetValue: "",
+        scale: (100 / this.props.quizSections.length),
+        percentage : (100 / this.props.quizSections.length),
+        finalScore: null,
+        maxScore:100,
+        onChange: "",
     }
     nextContent =() =>{
         this.setState(state =>{
@@ -66,6 +72,44 @@ export default class QuizFullPage extends Component {
             }
         });
     }
+
+    increaseProgressBar = () =>{
+        this.setState(state => {
+            if(state.endQuiz)
+                return {scale:state.scale}
+            else
+                return {scale: (state.scale + state.percentage)}
+        })
+    }
+
+
+    decreaseProgressBar = () =>{
+        this.setState(state => {
+            return {scale: (state.scale - state.percentage)}
+        })
+    }
+
+    calculateScore = () =>{
+        this.setState(state => {
+            console.log(state.endQuiz)
+            if(state.endQuiz) 
+                this.calculateFinalScore()
+        })
+        
+    }
+    calculateFinalScore(){
+        console.log("inside calculate score")
+    let score = 0;
+    this.state.userAnswers.forEach((element, index) => {
+        if(element === this.state.answers[index]){
+            score += this.state.maxScore / this.state.questionsArray.length;
+        }
+    });
+        score = Math.ceil(score);
+        this.setState({
+            finalScore: score
+        });
+    }
     render() {
         const inlineImage ={
             width: "1fr",       
@@ -91,47 +135,50 @@ export default class QuizFullPage extends Component {
                 </div>               
             )
         })
-        console.log(this.state.answers)
-        return (
-            <>
-                <div className="card py-md-4 px-4" style={inlineCard}>
+        return (            
+            <div className="card py-md-4 px-4" style={inlineCard}>
                 <div className="row no-gutters">
                 <div className="col-md-5 mt-4">
-                    <img src={this.props.image} style={inlineImage} className="card-img " alt="at the left side"/>
+                    <img src={this.props.image} style={inlineImage} className="card-img mb-2" alt="at the left side"/>
                 </div>
                 <div className="col-md-5 m-auto">
-                <h5 className="card-title text-right ml-auto mr-auto">{this.props.topic}</h5>                               
-                <div className="text-justify ml-4">{this.state.questionsArray[this.state.index]}</div>
-                <form className=" ml-4">{splitChoices}</form>
+                <h5 className="card-title text-center ml-auto mr-auto">{this.props.topic}</h5>                               
+                <div className="text-left">{this.state.questionsArray[this.state.index]}</div>
+                <form className="">{splitChoices}</form>
                 </div>
                 </div>
-                <div className="card-footer text-muted text-right">
-                    <button className="btn btn-success mr-2" onClick={() =>{this.prevContent()}} disabled={!this.state.index}>Back</button>
-                    <button className="btn btn-success" onClick={() =>{this.nextContent()}} data-toggle={this.state.dataValue} data-target={this.state.targetValue}>{this.state.buttonName}</button>
+                <div className="card-footer text-muted text-center">
+                    <button className="btn btn-success float-right" onClick={() =>{this.nextContent();this.increaseProgressBar();this.calculateScore()}} data-toggle={this.state.dataValue} data-target={this.state.targetValue}>{this.state.buttonName}</button>
+                    <button className="btn btn-success ml-5" onClick={() =>{this.prevContent();this.decreaseProgressBar()}} disabled={!this.state.index}>Back</button>
                 </div> 
                 {/* Modal */}
                 <div className="modal fade" id="exampleModalCenter" tabIndex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                     <div className="modal-dialog modal-dialog-centered" role="document">
                         <div className="modal-content">
                         <div className="modal-header">
-                            <h5 className="modal-title" id="exampleModalLongTitle">Congratulations</h5>
+                            <h5 className="modal-title text-center" id="exampleModalLongTitle">{this.state.finalScore > 50 ? "Congratulations" : "You should practice more"}</h5>
                             <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                        <div className="modal-body">
-                            Always believe in yourself even when it’s not easy
+                        <div className="modal-body text-center">
+                            <h5>You Scored:</h5> <h3>{this.state.finalScore}</h3> <h6>out of 100</h6>
+                            
                         </div>
                         <div className="modal-footer">
-                            <button type="button" className="btn btn-secondary" data-dismiss="modal">Lessons</button>
-                            <button type="button" className="btn btn-success">Quiz</button>
+                            <p className="mr-5">Whould you like to <a href={"http://localhost:3000/quizzes/"+this.props.id}target="_self">try again</a>?</p>
+                            <button type="button" className="btn btn-info" data-dismiss="modal">Quizzes</button>
+                            <button type="button" className="btn btn-success">Lesson</button>
                         </div>
                         </div>
                     </div>
                 </div>
                 {/* End Modal */}
+                {/* Progress Bar*/}
+                <div className="progress">
+                    <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style={{width:`${this.state.scale}%`}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
-            </>
+            </div>
         )
     }
 }

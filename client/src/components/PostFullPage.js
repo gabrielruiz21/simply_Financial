@@ -12,7 +12,7 @@ state={
   targetValue: "",
   endLesson:false
 }
-//good
+
 nextContent = () => {  
   this.setState(state => {
     if (state.currentIndex === state.textArray.length)
@@ -37,7 +37,7 @@ prevContent = () =>{
   })
   this.changeButtonFunction()  
 }
-//good
+
 increaseProgressBar = () =>{
   this.setState(state => {
     if(state.endLesson)
@@ -47,13 +47,13 @@ increaseProgressBar = () =>{
   })
 }
 
-//good
+
 decreaseProgressBar = () =>{
   this.setState(state => {
     return {scale: (state.scale - state.percentage)}
   })
 }
-//good
+
 changeButtonFunction = () =>{     
     this.setState(state =>{
       if (state.currentIndex === state.textArray.length)
