@@ -7,11 +7,12 @@
     "react": "^16.10.1",
     "react-bootstrap": "^1.4.0",
     "react-dom": "^16.10.1",
-    "react-elastic-carousel": "^0.9.5",
     "react-responsive-modal": "^6.0.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.3",
-    "react-text-carousel": "^0.1.1"
+    "react-elastic-carousel": "^0.9.5",
+    "react-text-carousel": "^0.1.1",
+    "react-typist": "file:node_modules/react-typist"
   },
   "scripts": {
     "start": "react-scripts start",
