@@ -69,7 +69,7 @@ class PostFormPage extends React.Component {
   }
 
   render() {
-    if(this.state.success) return <Redirect to="/posts/new" />;
+    if(this.state.success) return <Redirect to="/Lessons" />;
 
     let errorMessage = null;
     if(this.state.error) {
@@ -111,7 +111,7 @@ class PostFormPage extends React.Component {
           </div>
           <div className="input-group mb-3">
           <div className="input-group-prepend"> 
-            <span className="input-group-text" id="basic-addon3">URL</span>
+            <span className="input-group-text" id="basic-addon3">Image URL</span>
           </div>
           <input 
             type="text" 

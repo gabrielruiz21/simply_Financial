@@ -13,7 +13,6 @@ export default class AboutUsPage extends Component {
     fetch("/api/quizzes")      
       .then(res =>res.json())
       .then(quizzs => {
-        console.log(quizzs)
         this.setState({
           loading: false,
           quizzes: quizzs.map((p,ii) => <Quiz {...p} key={ii} />),

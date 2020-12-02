@@ -11,10 +11,10 @@ import PostsListPage from './pages/PostsListPage';
 import PostFormPage from './pages/PostFormPage';
 import ShowPostPage from './pages/ShowPostPage';
 import AboutUsPage from './pages/AboutUsPage';
-import logo from '../src/logo.svg';
-
-import './App.css';
 import ShowQuizPage from './pages/ShowQuizPage';
+import logo from '../src/logo.svg';
+import './App.css';
+
 
 function Navigation(props) {
   return (
@@ -27,7 +27,7 @@ function Navigation(props) {
           </NavLink>
         </li>
         <li className="nav-item">
-          <NavLink className="nav-link" exact to="/posts/new">
+          <NavLink className="nav-link" exact to="/Lessons">
             Learning center
           </NavLink>
         </li>
@@ -56,11 +56,12 @@ class App extends React.Component {
             <div className="row justify-content-center">
               <Switch>
                 <Route path="/home" component={HomePage} />
-                <Route path="/posts/new" component={PostsListPage} />
-                <Route path="/posts/:id" component={ShowPostPage} />
+                <Route path="/Lessons" component={PostsListPage} />
+                <Route path="/Lesson/:id" component={ShowPostPage} />
                 <Route path="/about-us" component={AboutUsPage} />
                 <Route path="/quizzes/:id" component={ShowQuizPage}/>
-                <Route path="/" component={PostFormPage} />
+                <Route path="/create" component={PostFormPage} />
+                <Route path="/" component={HomePage} />
               </Switch>
             </div>
           </div>

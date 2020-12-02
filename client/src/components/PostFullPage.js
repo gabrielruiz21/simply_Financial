@@ -10,7 +10,8 @@ state={
   percentage : (100 / this.props.sections.length),
   dataValue: "",
   targetValue: "",
-  endLesson:false
+  endLesson:false,
+  dataDimiss: ""
 }
 
 nextContent = () => {  
@@ -68,6 +69,14 @@ changeButtonFunction = () =>{
               }     
     })
 }
+
+fixModal = () =>{
+  this.setState(state => {
+    return {
+      dataDimiss: "modal",
+    }
+  })
+}
   render() {
   const inlineImage ={
     width: "1fr",       
@@ -83,14 +92,14 @@ changeButtonFunction = () =>{
             <div className="col-md-5 mt-4">
               <img src={this.props.image} style={inlineImage} className="card-img " alt="at the left side"/>
             </div>
-            <div className="col-md-5">
-              <h5 className="card-title text-right ml-auto mr-auto">{this.props.name}</h5>                               
-              <div className="text-justify ml-4">{this.state.textArray[this.state.index]}</div>
+            <div className="col-md-5 m-auto">
+              <h5 className="card-title text-center ml-auto mr-auto">{this.props.name}</h5>                               
+              <div className="text-left">{this.state.textArray[this.state.index]}</div>
             </div>
           </div>
           <div className="card-footer text-muted text-center">          
-          <div className="float-right">
-          <button className="btn btn-success" onClick={() =>{this.nextContent(); this.increaseProgressBar()}} data-toggle={this.state.dataValue} data-target={this.state.targetValue}>{this.state.buttonName}</button>
+            <button className="btn btn-success float-right" onClick={() =>{this.nextContent(); this.increaseProgressBar()}} data-toggle={this.state.dataValue} data-target={this.state.targetValue}>{this.state.buttonName}</button>
+            <button className="btn btn-success ml-5" onClick={() =>{this.prevContent();this.decreaseProgressBar()}}  disabled={!this.state.index}>Back</button>
           </div>
           {/* Modal */}
           <div className="modal fade" id="exampleModalCenter" tabIndex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -106,16 +115,13 @@ changeButtonFunction = () =>{
                     Always believe in yourself even when it’s not easy
                   </div>
                   <div className="modal-footer">
-                    <button type="button" className="btn btn-secondary" data-dismiss="modal">Lessons</button>
-                    <button type="button" className="btn btn-success">Quiz</button>
+                    <a className="btn btn-success" href={"http://localhost:3000/Lessons"}target="_self">Lessons</a>
+                    <a className="btn btn-success" href={"http://localhost:3000/quizzes/"+this.props.quizzes[0].id}target="_self">Quiz</a>
                   </div>
                 </div>
               </div>
             </div>
-          <div>
-            <button className="btn btn-success ml-4" onClick={() =>{this.prevContent();this.decreaseProgressBar()}}  disabled={!this.state.index}>Back</button>
-          </div>
-          </div>
+          {/* End Modal */}
           <div className="progress">
           <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style={{width:`${this.state.scale}%`}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
           </div>

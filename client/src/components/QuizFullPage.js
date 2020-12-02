@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom';
 
 export default class QuizFullPage extends Component {
     state={
@@ -91,7 +90,6 @@ export default class QuizFullPage extends Component {
 
     calculateScore = () =>{
         this.setState(state => {
-            console.log(state.endQuiz)
             if(state.endQuiz) 
                 this.calculateFinalScore()
         })
@@ -120,9 +118,9 @@ export default class QuizFullPage extends Component {
             maxWidth: "60%",
         };
         const choices = this.state.choicesArray[this.state.index].split(",");
-        const splitChoices = choices.map((element) =>{ 
+        const splitChoices = choices.map((element, index) =>{ 
             return(
-                <div className="radio" > 
+                <div className="radio" key={index} > 
                     <label>
                         <input 
                         type="radio" 
@@ -167,8 +165,8 @@ export default class QuizFullPage extends Component {
                         </div>
                         <div className="modal-footer">
                             <p className="mr-5">Whould you like to <a href={"https://simply-financial.herokuapp.com/quizzes/"+this.props.id}target="_self">try again</a>?</p>
-                            <button type="button" className="btn btn-info" data-dismiss="modal">Quizzes</button>
-                            <button type="button" className="btn btn-success">Lesson</button>
+                            <a className="btn btn-success" href={"http://localhost:3000/Lesson/"+this.props.postId}target="_self">Lesson</a>
+                            <a className="btn btn-success" href={"http://localhost:3000/about-us/"}target="_self">Quizess</a>
                         </div>
                         </div>
                     </div>

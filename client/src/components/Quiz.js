@@ -6,7 +6,6 @@ export default function Quiz({topic,image,description,id}) {
         width: "1fr",    
         height: "1fr",    
     };
-    console.log(topic)
     return (     
     <div className="col-md-3 mb-3 mt-3">
     <div className="card card-body" style={{height:"1fr"}} >
