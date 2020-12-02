@@ -165,8 +165,8 @@ export default class QuizFullPage extends Component {
                         </div>
                         <div className="modal-footer">
                             <p className="mr-5">Whould you like to <a href={"https://simply-financial.herokuapp.com/quizzes/"+this.props.id}target="_self">try again</a>?</p>
-                            <a className="btn btn-success" href={"http://localhost:3000/Lesson/"+this.props.postId}target="_self">Lesson</a>
-                            <a className="btn btn-success" href={"http://localhost:3000/about-us/"}target="_self">Quizess</a>
+                            <a className="btn btn-success" href={"https://simply-financial.herokuapp.com/Lesson/"+this.props.postId}target="_self">Lesson</a>
+                            <a className="btn btn-success" href={"https://simply-financial.herokuapp.com/about-us/"}target="_self">Quizess</a>
                         </div>
                         </div>
                     </div>

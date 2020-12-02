@@ -115,8 +115,8 @@ fixModal = () =>{
                     Always believe in yourself even when it’s not easy
                   </div>
                   <div className="modal-footer">
-                    <a className="btn btn-success" href={"http://localhost:3000/Lessons"}target="_self">Lessons</a>
-                    <a className="btn btn-success" href={"http://localhost:3000/quizzes/"+this.props.quizzes[0].id}target="_self">Quiz</a>
+                    <a className="btn btn-success" href={"https://simply-financial.herokuapp.com/Lessons"}target="_self">Lessons</a>
+                    <a className="btn btn-success" href={"https://simply-financial.herokuapp.com/quizzes/"+this.props.quizzes[0].id}target="_self">Quiz</a>
                   </div>
                 </div>
               </div>
