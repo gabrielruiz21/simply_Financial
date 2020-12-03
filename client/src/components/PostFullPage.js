@@ -80,21 +80,21 @@ fixModal = () =>{
   render() {
   const inlineImage ={
     width: "1fr",       
-    height: "1fr",
+    height: "190px",
   };
 
   const inlineCard ={
-    maxWidth: "60%",
+    width: "60vw",
   };
   return (      
-        <div className="card py-md-4 px-4" style={inlineCard} >
-          <div className="row no-gutters">
-            <div className="col-md-5 mt-4">
+        <div className="card py-2 px-4" style={inlineCard} >
+          <div className="row no-gutters" style={{height:"20vw"}}>
+            <div className="col-md-5 my-auto">
               <img src={this.props.image} style={inlineImage} className="card-img " alt="at the left side"/>
             </div>
-            <div className="col-md-5 m-auto">
-              <h5 className="card-title text-center ml-auto mr-auto">{this.props.name}</h5>                               
-              <div className="text-left">{this.state.textArray[this.state.index]}</div>
+            <div className="col ml-3 my-auto">
+              <h5 className="card-title text-center mx-auto">{this.props.name}</h5>                               
+              <p className="text-left" >{this.state.textArray[this.state.index]}</p>
             </div>
           </div>
           <div className="card-footer text-muted text-center">          

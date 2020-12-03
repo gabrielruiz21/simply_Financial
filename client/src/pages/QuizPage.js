@@ -25,8 +25,8 @@ state = {
         }
 
         return (
-            <div className="container-fluid" style={{width:"90%"}}>
-                <div className="row">
+            <div className="container-fluid">
+                <div className="row justify-content-center">
                     { this.state.quizzes}
                 </div>
             </div>

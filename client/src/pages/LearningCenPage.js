@@ -1,43 +1,6 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom';
-import '../cards.scss'
-
-class CardHeader extends React.Component {
-  render() {
-    const { image } = this.props;
-    var style = { 
-        backgroundImage: 'url(' + image + ')',
-    };
-    return (
-      <header style={style} id={image} className="card-header">
-      </header>
-    )
-  }
-}
-
-class Button extends React.Component {
-  render() {
-    return (
-      <Link to={this.props.link} className="button button-primary">
-        <i className="fa fa-chevron-right"></i> Find out more
-      </Link>
-    )
-  }
-}
-
-class CardBody extends React.Component {
-  render() {
-    return (
-      <div className="card-body">        
-        <h2>{this.props.title}</h2>
-        
-        <p className="body-content">{this.props.text}</p>
-        
-        <Button link={this.props.link}/>
-      </div>
-    )
-  }
-}
+import CardBody from '../components/CardBody'
+import CardHeader from '../components/CardHeader'
 
 export default class LearningCenPage extends Component {
   render() {

@@ -15,6 +15,7 @@ import ShowQuizPage from './pages/ShowQuizPage';
 import LearningCenPage from './pages/LearningCenPage';
 import logo from '../src/logo.png';
 import './App.css';
+import '../src/cards.scss'
 import QuizPage from './pages/QuizPage';
 
 
@@ -29,7 +30,7 @@ function Navigation(props) {
           </NavLink>
         </li>
         <li className="nav-item">
-          <NavLink className="nav-link" exact to="/LearningCenter">
+          <NavLink className="nav-link" exact to="/Learning-Center">
             Learning center
           </NavLink>
         </li>
@@ -63,7 +64,7 @@ class App extends React.Component {
                 <Route path="/quizzes" component={QuizPage} />
                 <Route path="/quizz/:id" component={ShowQuizPage}/>
                 <Route path="/create" component={PostFormPage} />
-                <Route path="/LearningCenter" component={LearningCenPage} />
+                <Route path="/Learning-Center" component={LearningCenPage} />
                 <Route path="/" component={HomePage} />
               </Switch>
             </div>
