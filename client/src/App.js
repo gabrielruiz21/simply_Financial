@@ -22,28 +22,28 @@ import QuizPage from './pages/QuizPage';
 function Navigation(props) {
   return (
     <>
-    <nav className="navbar navbar-expand navbar-light " style={{backgroundColor: "#e3f2fd"}}>
-      <ul className="navbar-nav mr-auto">
-        <li className="nav-item">
-          <NavLink className="nav-link" exact to="/home">
-            Home
-          </NavLink>
-        </li>
-        <li className="nav-item">
-          <NavLink className="nav-link" exact to="/Learning-Center">
-            Learning center
-          </NavLink>
-        </li>
-        <li className="nav-item">
-          <NavLink className="nav-link" exact to="/about-us">
-            About Us
-          </NavLink>
-        </li>
-      </ul>
-      <div className="logo" style={{marginRight:"45vw"}} >
-    <img src={logo} className="" alt="Logo of the company" width="90px"/>
-    </div>     
-    </nav>    
+      <nav className="navbar navbar-expand navbar-light " style={{backgroundColor: "#e3f2fd"}}>
+        <ul className="navbar-nav mr-auto">
+          <li className="nav-item">
+            <NavLink className="nav-link" exact to="/home">
+              Home
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink className="nav-link" exact to="/Learning-Center">
+              Learning center
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink className="nav-link" exact to="/about-us">
+              About Us
+            </NavLink>
+          </li>
+        </ul>
+        <a className="navbar-brand" href="https://simply-financial.herokuapp.com/home" style={{marginRight:"45vw"}} >
+          <img src={logo} alt="Logo of the company" width="90px"/>
+        </a>     
+      </nav>    
     </>
   );
 }
