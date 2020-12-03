@@ -96,7 +96,6 @@ export default class QuizFullPage extends Component {
         
     }
     calculateFinalScore(){
-        console.log("inside calculate score")
     let score = 0;
     this.state.userAnswers.forEach((element, index) => {
         if(element === this.state.answers[index]){
@@ -164,9 +163,9 @@ export default class QuizFullPage extends Component {
                             
                         </div>
                         <div className="modal-footer">
-                            <p className="mr-5">Whould you like to <a href={"https://simply-financial.herokuapp.com/quizzes/"+this.props.id} target="_self">try again</a>?</p>
+                            <p className="mr-5">Whould you like to <a href={"https://simply-financial.herokuapp.com/quizz/"+this.props.id} target="_self">try again</a>?</p>
                             <a className="btn btn-success" href={"https://simply-financial.herokuapp.com/Lesson/"+this.props.postId} target="_self">Lesson</a>
-                            <a className="btn btn-success" href={"https://simply-financial.herokuapp.com/about-us/"} target="_self">Quizess</a>
+                            <a className="btn btn-success" href={"https://simply-financial.herokuapp.com/quizzes"} target="_self">Quizess</a>
                         </div>
                         </div>
                     </div>
