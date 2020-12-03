@@ -12,8 +12,8 @@ class HomePage extends React.Component {
 
   render(){
   return (
-  <div class="homepage-main">
-    <div class="carousel-container">
+  <div className="homepage-main pt-2">
+    <div className="carousel-container">
         <Carousel>
           <Carousel.Item className="carousel-item">
             <img className="carousel-image d-block" src={slide1} alt="First slide" />

@@ -27,8 +27,8 @@ class PostsListPage extends React.Component {
     }
 
     return (
-      <div className="container-fluid" style={{width:"90%"}}>
-        <div className="row">
+      <div className="container-fluid">
+        <div className="row justify-content-center">
           { this.state.posts }
         </div>
       </div>

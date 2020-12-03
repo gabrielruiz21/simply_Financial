@@ -12,14 +12,16 @@ import PostFormPage from './pages/PostFormPage';
 import ShowPostPage from './pages/ShowPostPage';
 import AboutUsPage from './pages/AboutUsPage';
 import ShowQuizPage from './pages/ShowQuizPage';
-import logo from '../src/logo.svg';
+import LearningCenPage from './pages/LearningCenPage';
+import logo from '../src/logo.png';
 import './App.css';
+import QuizPage from './pages/QuizPage';
 
 
 function Navigation(props) {
   return (
-    <div>
-    <nav className="navbar navbar-expand-sm navbar-light shadow mb-3" style={{backgroundColor: "#F1E0B0"}}>
+    <>
+    <nav className="navbar navbar-expand navbar-light " style={{backgroundColor: "#e3f2fd"}}>
       <ul className="navbar-nav mr-auto">
         <li className="nav-item">
           <NavLink className="nav-link" exact to="/home">
@@ -27,7 +29,7 @@ function Navigation(props) {
           </NavLink>
         </li>
         <li className="nav-item">
-          <NavLink className="nav-link" exact to="/Lessons">
+          <NavLink className="nav-link" exact to="/LearningCenter">
             Learning center
           </NavLink>
         </li>
@@ -37,12 +39,11 @@ function Navigation(props) {
           </NavLink>
         </li>
       </ul>
-      <div className="" style={{marginRight:"50vw"}} >
-    <img src={logo} className="" alt="Logo of the company" width="40px"/>
+      <div className="logo" style={{marginRight:"45vw"}} >
+    <img src={logo} className="" alt="Logo of the company" width="90px"/>
     </div>     
-    </nav>
-    
-    </div>
+    </nav>    
+    </>
   );
 }
 
@@ -52,15 +53,17 @@ class App extends React.Component {
     return (
         <Router>
           <Navigation />
-          <div>
-            <div className="row justify-content-center">
+          <div className="">
+            <div className="row m-auto" >
               <Switch>
                 <Route path="/home" component={HomePage} />
                 <Route path="/Lessons" component={PostsListPage} />
                 <Route path="/Lesson/:id" component={ShowPostPage} />
                 <Route path="/about-us" component={AboutUsPage} />
-                <Route path="/quizzes/:id" component={ShowQuizPage}/>
+                <Route path="/quizzes" component={QuizPage} />
+                <Route path="/quizz/:id" component={ShowQuizPage}/>
                 <Route path="/create" component={PostFormPage} />
+                <Route path="/LearningCenter" component={LearningCenPage} />
                 <Route path="/" component={HomePage} />
               </Switch>
             </div>

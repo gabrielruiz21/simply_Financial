@@ -110,8 +110,8 @@ export default class QuizFullPage extends Component {
     }
     render() {
         const inlineImage ={
-            width: "1fr",       
-            height: "1fr",
+            width: "600px",       
+            height: "400px",
         };
         
         const inlineCard ={
