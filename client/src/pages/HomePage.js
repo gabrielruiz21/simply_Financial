@@ -17,25 +17,29 @@ class HomePage extends React.Component {
         <Carousel>
           <Carousel.Item className="carousel-item">
             <img className="carousel-image d-block" src={slide1} alt="First slide" />
-              <Carousel.Caption topright class="toprighttext">
-                  <h3 class="carousel-text-heading1">Simply Financial</h3>
-                  <p>An exciting, all in one, website for children to discover 
-                  new and exciting financial topics 
-                  that will help them into adulthood!
-                  </p>
+              <Carousel.Caption class="toprighttext1">
+                <h3 class="carousel-text-heading1 font-weight-bold">Simply Financial</h3>
+                <p>An exciting, all in one, website for children to discover 
+                simple and basic financial topics 
+                that will help them into adulthood!
+                </p>
               </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item className="carousel-item">
             <img className="carousel-image d- block" src={slide2} alt="Third slide" />
-            <Carousel.Caption>
-              <h3>Second slide label</h3>
-              
-            </Carousel.Caption>
+              <Carousel.Caption>
+                <h3 className="font-weight-bold" style={{color:"black"}}>Range of Topics</h3>
+                <p className="font-weight-bold">From budgeting to learning about credit, we offer a fun and educational environment for curious minds.
+                </p>
+              </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item className="carousel-item">
             <img className="carousel-image d- block" src={slide3} alt="Third slide" />
-            <Carousel.Caption>
-              <h3>Third slide label</h3>
+            <Carousel.Caption class="toprighttext2">
+              <h3 class="carousel-text-heading3 font-weight-bold">Never too Early to Start</h3>
+              <p>We believe that it's never too early, or too late, to begin teaching kids about finance. The beginning of financial literacy 
+                is just a single click ahead.
+              </p>
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
@@ -45,7 +49,9 @@ class HomePage extends React.Component {
       <div class="row section1">
         <div class="col-md-7">
           <h1>Discover...</h1>
-          <p>[Insert Text Here]</p>
+          <p>Simply Financial is a place where children of all ages can come and discover the world of Finance! Select lessons on the
+            topics that peak the most interest and begin reading all about them through the click of your mouse.  
+          </p>
         </div>
         <div class="col-md-5">
           <img class="section1-img img-fluid" src={sectImg1} alt="basic img"/>
