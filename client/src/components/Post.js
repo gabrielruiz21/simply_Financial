@@ -1,25 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import CardBody from './CardBody';
+import CardHeader from './CardHeader';
 
-function Post({name,description,id,image}) {
-  const inline ={
-    width: "1fr",    
-    height: "1fr",    
-  };
+export default function Post({name,description,id,image}) {
   return (     
-<div className="col-md-3 mb-3 mt-3">
-<div className="card card-body" style={{height:"1fr"}} >
-  <img src={image} style={inline} className="card-img-top mr-auto ml-auto mb-2" alt="Header"/>
-  <div className="card-title">
-    <Link to={"/Lesson/"+id}>{ name }</Link>
-  </div>
-  <div className="card-text">
-    {description }
-  </div>
-</div>              
-</div>     
-
+      <article className="cardLong">
+          <CardHeader image={image}/>
+          <CardBody link={"/Lesson/"+id} title={name} text={description}/>
+      </article>
   );
 }
-
-export default Post;

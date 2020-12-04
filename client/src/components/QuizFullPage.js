@@ -96,7 +96,6 @@ export default class QuizFullPage extends Component {
         
     }
     calculateFinalScore(){
-        console.log("inside calculate score")
     let score = 0;
     this.state.userAnswers.forEach((element, index) => {
         if(element === this.state.answers[index]){
@@ -111,11 +110,11 @@ export default class QuizFullPage extends Component {
     render() {
         const inlineImage ={
             width: "1fr",       
-            height: "1fr",
+            height: "190px",
         };
         
         const inlineCard ={
-            maxWidth: "60%",
+            width:"60vw",
         };
         const choices = this.state.choicesArray[this.state.index].split(",");
         const splitChoices = choices.map((element, index) =>{ 
@@ -134,12 +133,12 @@ export default class QuizFullPage extends Component {
             )
         })
         return (            
-            <div className="card py-md-4 px-4" style={inlineCard}>
-                <div className="row no-gutters">
+            <div className="card py-2 px-4" style={inlineCard}>
+                <div className="row no-gutters mb-4" >
                 <div className="col-md-5 mt-4">
                     <img src={this.props.image} style={inlineImage} className="card-img mb-2" alt="at the left side"/>
                 </div>
-                <div className="col-md-5 m-auto">
+                <div className="col ml-3 my-auto">
                 <h5 className="card-title text-center ml-auto mr-auto">{this.props.topic}</h5>                               
                 <div className="text-left">{this.state.questionsArray[this.state.index]}</div>
                 <form className="">{splitChoices}</form>
@@ -164,9 +163,9 @@ export default class QuizFullPage extends Component {
                             
                         </div>
                         <div className="modal-footer">
-                            <p className="mr-5">Would you like to <a href={"https://simply-financial.herokuapp.com/quizzes/"+this.props.id}target="_self">try again</a>?</p>
-                            <a className="btn btn-success" href={"http://localhost:3000/Lesson/"+this.props.postId}target="_self">Lesson</a>
-                            <a className="btn btn-success" href={"http://localhost:3000/about-us/"}target="_self">Quizess</a>
+                            <p className="mr-5">Would you like to <a href={"https://simply-financial.herokuapp.com/quizz/"+this.props.id} target="_self">try again</a>?</p>
+                            <a className="btn btn-success" href={"https://simply-financial.herokuapp.com/Lesson/"+this.props.postId} target="_self">Lesson</a>
+                            <a className="btn btn-success" href={"https://simply-financial.herokuapp.com/quizzes"} target="_self">Quizess</a>
                         </div>
                         </div>
                     </div>

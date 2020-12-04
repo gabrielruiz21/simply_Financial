@@ -80,21 +80,21 @@ fixModal = () =>{
   render() {
   const inlineImage ={
     width: "1fr",       
-    height: "1fr",
+    height: "190px",
   };
 
   const inlineCard ={
-    maxWidth: "60%",
+    width: "60vw",
   };
   return (      
-        <div className="card py-md-4 px-4" style={inlineCard} >
-          <div className="row no-gutters">
-            <div className="col-md-5 mt-4">
+        <div className="card py-2 px-4" style={inlineCard} >
+          <div className="row no-gutters" style={{height:"20vw"}}>
+            <div className="col-md-5 my-auto">
               <img src={this.props.image} style={inlineImage} className="card-img " alt="at the left side"/>
             </div>
-            <div className="col-md-5 m-auto">
-              <h5 className="card-title text-center ml-auto mr-auto">{this.props.name}</h5>                               
-              <div className="text-left">{this.state.textArray[this.state.index]}</div>
+            <div className="col ml-3 my-auto">
+              <h5 className="card-title text-center mx-auto">{this.props.name}</h5>                               
+              <p className="text-left" >{this.state.textArray[this.state.index]}</p>
             </div>
           </div>
           <div className="card-footer text-muted text-center">          
@@ -115,8 +115,8 @@ fixModal = () =>{
                     Always believe in yourself even when it’s not easy
                   </div>
                   <div className="modal-footer">
-                    <a className="btn btn-success" href={"http://localhost:3000/Lessons"}target="_self">Lessons</a>
-                    <a className="btn btn-success" href={"http://localhost:3000/quizzes/"+this.props.quizzes[0].id}target="_self">Quiz</a>
+                    <a className="btn btn-success" href={"https://simply-financial.herokuapp.com/Lessons"}target="_self">Lessons</a>
+                    <a className="btn btn-success" href={"https://simply-financial.herokuapp.com/quizz/"+this.props.quizzes[0].id}target="_self">Quiz</a>
                   </div>
                 </div>
               </div>

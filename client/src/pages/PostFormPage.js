@@ -9,6 +9,7 @@ class PostFormPage extends React.Component {
     description: '',
     image:'',
     content: '',
+    postId: '',
 
   }
 
@@ -46,7 +47,6 @@ class PostFormPage extends React.Component {
       body: JSON.stringify({name: this.state.name,
                             description: this.state.description,
                             image: this.state.image,
-                            content: this.state.content
                           }),
     })
       .then(res => {
@@ -57,7 +57,9 @@ class PostFormPage extends React.Component {
         throw new Error('Content validation');
       })
       .then(post => {
+        console.log(post.id)
         this.setState({
+          postId: post.id,
           success: true,
         });
       })
@@ -66,6 +68,17 @@ class PostFormPage extends React.Component {
           error: true,
         });
       });
+
+      fetch("/api/sections", {
+        method: 'POST',
+        credentials: 'include',
+        headers:{
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({content: this.state.content,
+                              postId: this.state.postId}),
+        
+      })
   }
 
   render() {
