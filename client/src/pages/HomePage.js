@@ -27,8 +27,8 @@ class HomePage extends React.Component {
           </Carousel.Item>
           <Carousel.Item className="carousel-item">
             <img className="carousel-image d- block" src={slide2} alt="Third slide" />
-              <Carousel.Caption>
-                <h3>Range of Topics</h3>
+              <Carousel.Caption class="toplefttext1">
+                <h3 class="carousel-text-heading2 font-weight-bold">Range of Topics</h3>
                 <p>From budgeting to learning about credit, we offer a fun and educational environment for curious minds.
                 </p>
               </Carousel.Caption>
@@ -48,8 +48,8 @@ class HomePage extends React.Component {
     <div class="container content">
       <div class="row section1">
         <div class="col-md-7">
-          <h1>Discover...</h1>
-          <p>Simply Financial is a place where children of all ages can come and discover the world of Finance! Select lessons on the
+          <h1 class = "h1-sections">Discover...</h1>
+          <p class="p-sections">Simply Financial is a place where children of all ages can come and discover the world of Finance! Select lessons on the
             topics that peak the most interest and begin reading all about them through the click of your mouse.  
           </p>
         </div>
@@ -60,8 +60,10 @@ class HomePage extends React.Component {
 
       <div class="row section2">
         <div class="col-md-7 order-md-2">
-          <h1>Grow...</h1>
-          <p>[Insert Text Here]</p>
+          <h1 class = "h1-sections">Grow...</h1>
+          <p class="p-sections">With the help of lessons and quizzes, you will grow your financial knowledge from a small seed into a beautiful flower! 
+            Not to mention also building up a strong word bank of new terms and topics!
+          </p>
         </div>
         <div class="col-md-5 order-md-1">
           <img class="section2-img img-fluid" src={sectImg2} alt="basic img"/>
@@ -70,8 +72,10 @@ class HomePage extends React.Component {
 
       <div class="row section3">
         <div class="col-md-7">
-          <h1>And Have Fun!</h1>
-          <p>[Insert Text Here]</p>
+          <h1 class = "h1-sections">And Have Fun!</h1>
+          <p class="p-sections">Before or after reviewing each lesson, why not stop by our quizzes section and test your knowledge of each financial topic!
+            We promise you'll enjoy it!
+          </p>
         </div>
         <div class="col-md-5">
           <img class="section3-img img-fluid" src={sectImg3} alt="basic img"/>

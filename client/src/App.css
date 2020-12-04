@@ -49,12 +49,12 @@
   height:600px;
   display: block;
 }
+/*Carousel Slides TextBox and Positioning*/
 .toprighttext1,.toprighttext2{
   position: absolute;
   top: 10%;
   right: 30px;
   font-size: 1.5vw;
-
   border-radius: 15px 50px;
   text-align: center;
   width: 25em;
@@ -65,17 +65,31 @@
 .toprighttext2{
   background-color: rgba(233, 147, 241, 0.87);
 }
+.toplefttext1{
+  position: absolute;
+  top: 10%;
+  left: 30px;
+  font-size: 1.5vw;
+  border-radius: 15px 50px;
+  text-align: center;
+  width: 25em;
+  background-color: yellow;
+}
+/*Carousel Slides Text*/
 .carousel-text-heading1{
   margin-top: 15px;
   color: #8181ffe8;
 }
-
+.carousel-text-heading2{
+  color: orange;
+  margin-top: 15px;
+}
 .carousel-text-heading3{
   margin-top: 15px;
   color: white;
 }
 
-/* Bottom Page Content*/
+/********** Bottom Page Content **********/
 .container.content{
   position: relative;
   width: 100%; 
@@ -102,7 +116,7 @@
     width: 100%;
     min-height: 1px;
     padding-right: 15px;
-    padding-left: 15px;
+    padding-left: 15px;  
 }
 
 .img-fluid{
@@ -113,5 +127,11 @@
   width:300px;
   vertical-align: middle;
 }
-
+.h1-sections{
+  margin-top: 25px; 
+}
+.p-sections{
+  margin-left: 50px;
+  margin-right: 50px;
+}
 /***********************************************************/
