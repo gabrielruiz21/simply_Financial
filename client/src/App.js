@@ -22,26 +22,26 @@ import QuizPage from './pages/QuizPage';
 function Navigation(props) {
   return (
     <>
-      <nav className="navbar navbar-expand navbar-light " style={{backgroundColor: "#e3f2fd"}}>
+      <nav className="navbar navbar-expand navbar-light" style={{backgroundColor: "#e3f2fd", paddingBottom: "0px"}}>
         <ul className="navbar-nav mr-auto">
           <li className="nav-item">
             <NavLink className="nav-link" exact to="/home">
-              Home
+              <u>Home</u>
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink className="nav-link" exact to="/Learning-Center">
-              Learning center
+            <NavLink className="nav-link" exact to="/Learning-Center" >
+              <u>Learning center</u>
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink className="nav-link" exact to="/about-us">
-              About Us
+            <NavLink className="nav-link " exact to="/about-us">
+              <u>About Us</u>
             </NavLink>
           </li>
         </ul>
-        <a className="navbar-brand" href="https://simply-financial.herokuapp.com/home" style={{marginRight:"45vw"}} >
-          <img src={logo} alt="Logo of the company" width="90px"/>
+        <a className="navbar-brand" href="https://simply-financial.herokuapp.com/home" style={{marginRight:"45vw", padding:"0px"}} >
+          <img src={logo} alt="Logo of the company" width="90px" style={{marginTop:"-10px", marginBottom:"5px"}}/>
         </a>     
       </nav>    
     </>
@@ -54,8 +54,8 @@ class App extends React.Component {
     return (
         <Router>
           <Navigation />
-          <div className="">
-            <div className="row m-auto" >
+          <div>
+            <div className="row m-auto">
               <Switch>
                 <Route path="/home" component={HomePage} />
                 <Route path="/Lessons" component={PostsListPage} />

@@ -9,10 +9,10 @@ import sectImg2 from '../Images/Section2-Img.PNG';
 import sectImg3 from '../Images/Section3-Img.PNG';
 
 class HomePage extends React.Component {
-
+  
   render(){
   return (
-  <div className="homepage-main pt-2">
+  <div className="homepage-main pt-3">
     <div className="carousel-container">
         <Carousel>
           <Carousel.Item className="carousel-item">
