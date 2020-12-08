@@ -1,5 +1,9 @@
 import React, { Component} from 'react'
 import icon from '../hand.svg'
+import AntonPic from '../anthon-Profile.jfif'
+import estebanPic from '../estebanPic.jpg'
+import stepPic from '../StepPic.jpg'
+import logo from '../logo.png'
 
 
 export default class AboutUsPage extends Component {
@@ -66,6 +70,11 @@ export default class AboutUsPage extends Component {
       fontFamily: "Helvetica"
     }
 
+    const pStyle ={
+      fontSize: "13px",
+      marginBottom: "2px",
+    }
+
     return (
       <div className="container-fluid px-0">
         <div className="jumbotron px-0 py-0" style={jumboStyle}>          
@@ -88,27 +97,40 @@ export default class AboutUsPage extends Component {
           <h1 className="text-center mt-5">This is a title</h1>
           <hr style={{border: "0.5px solid red", width: "20%"}}></hr>
           <p className="text-center" style={{marginLeft: "25%", marginRight: "25%" }}>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
-        </div>
-        
+        </div>        
         <div class="containe text-center" style={{backgroundColor: "#e3f2fd"}}>
-          <div style={{marginTop: "100px", backgroundColor: "#e3f2fd"}}>
-          <h2 className="text-center">Co-Founders</h2>
+          <div style={{marginTop: "50px", backgroundColor: "#e3f2fd"}}>
+          <h1 className="text-center">Co-Founders</h1>
         </div>
         <div class="row m-auto">
-          <div class="col-md mt-5">
-            <img src="https://randomuser.me/api/portraits/men/75.jpg" style={{borderRadius:"50%"}}alt="Avatar"/>
-            <p className="text-center" style={{marginLeft: "25%", marginRight: "25%", marginTop:"15px"}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut turpis metus. Integer et metus eu sapien varius vulputate non posuere mi. Duis a enim urna. Nulla vitae egestas nisl. Pellentesque vel tellus quis eros tempor molestie ac et diam</p>
+          <div class="col-md mt-3">
+            <img src={stepPic} style={{borderRadius:"20%", width: "120px", height: "150px"}}alt="Avatar"/>
+            <h3 className="text-center" style={{marginTop:"15px"}}>Stephany Belendez</h3>
+            <p style={pStyle}>Front-end Developer & UX Design</p>
+            <p style={pStyle}>CUNY Brooklyn College Fall 2020</p>
           </div>
-          <div class="col-md mt-5">
-            <img src="https://randomuser.me/api/portraits/men/75.jpg" style={{borderRadius:"50%"}}alt="Avatar"/>
-            <p className="text-center" style={{marginLeft: "25%", marginRight: "25%", marginTop:"15px"}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut turpis metus. Integer et metus eu sapien varius vulputate non posuere mi. Duis a enim urna. Nulla vitae egestas nisl. Pellentesque vel tellus quis eros tempor molestie ac et diam</p>
+          <div class="col-md mt-3">
+            <img src={estebanPic} style={{borderRadius:"20%", width: "120px", height: "150px"}}alt="Avatar"/>
+            <h3 className="text-center" style={{marginTop:"15px"}}>Gabriel Ruiz</h3>
+            <p style={pStyle}>Back-end Developer & Database Administrator</p>
+            <p style={pStyle}>CUNY John Jay College Spring 2022</p>
           </div>
-          <div class="col-md mt-5">
-            <img src="https://randomuser.me/api/portraits/men/75.jpg" style={{borderRadius:"50%"}}alt="Avatar"/>
-            <p className="text-center" style={{marginLeft: "25%", marginRight: "25%", marginTop:"15px"}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut turpis metus. Integer et metus eu sapien varius vulputate non posuere mi. Duis a enim urna. Nulla vitae egestas nisl. Pellentesque vel tellus quis eros tempor molestie ac et diam</p>
+          <div class="col-md mt-3">
+            <img src={AntonPic} style={{borderRadius:"20%", width: "120px", height: "155px"}}alt="Avatar"/>
+            <h3 className="text-center" style={{marginTop:"15px"}}>Anton Marku</h3>
+            <p style={pStyle}>Back-end Developer & Component Implementation</p>
+            <p style={pStyle}>CUNY Hunter College Fall 2020</p>
           </div>
         </div>
       </div>
+      <hr style={{marginBottom: "0px",marginTop: "5px",border: "0.5px solid red", width: "20%"}}></hr>
+      <footer className="footer">
+        <div className="container text-center">
+          <img src={logo} style={{margin: "auto", width: "100px", height: "60px",marginBottom: "2px" }} alt="company logo"></img>
+          <p style={{marginBottom: "0px", fontSize: "12px"}}>Terms & Conditions | Privacy Policy | Cookie consent</p>
+          <p style={{fontSize: "12px"}}>&#169;2020 Simply Financial. All Rights Reserved</p>
+        </div>
+      </footer>
       </div>
     )
   }
