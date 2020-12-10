@@ -16,7 +16,7 @@ export default class LearningCenPage extends Component {
       </article>
       <article className="cardLearning">
         <CardHeader image={'https://source.unsplash.com/600x400/?tv,videos,camara,electronics'}/>
-        <CardBody title={'Videos'} text={'Kayaks crowd Three Sister Springs, where people and manatees maintain controversial coexistence'}/>
+        <CardBody link={"/videos"}title={'Videos'} text={'With this video series, we teach teens and pre-teens how to manage their money and foster an entrepreneurial spirit.'}/>
       </article>
       </>
     )

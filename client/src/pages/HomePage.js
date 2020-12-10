@@ -18,7 +18,7 @@ class HomePage extends React.Component {
           <Carousel.Item className="carousel-item">
             <img className="carousel-image d-block" src={slide1} alt="First slide" />
               <Carousel.Caption class="toprighttext1">
-                <h3 class="carousel-text-heading1 font-weight-bold">Simply Financial</h3>
+                <h3 className="carousel-text-heading1 font-weight-bold">Simply Financial</h3>
                 <p>An exciting, all in one, website for children to discover 
                 simple and basic financial topics 
                 that will help them into adulthood!

@@ -90,20 +90,26 @@ export default class AboutUsPage extends Component {
             </div>          
         </div>
         <div>
-          <h1 className="text-center mt-5">This is a title</h1>
+          <h1 className="text-center mt-5">Who We Are</h1>
           <hr style={{border: "0.5px solid red", width: "20%"}}></hr>
-          <p className="text-center" style={{marginLeft: "25%", marginRight: "25%" }}>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+          <p className="text-center" style={{marginLeft: "25%", marginRight: "25%" }}>
+            Simply Financial is an online website that is targeted towards a younger audience and whose main goal is to teach them about the importance of finance in today’s world.
+            The idea of this project stems from the lack of financial literacy among our younger generation and we wanted to create something that is both fun and educational.
+          </p>
 
-          <h1 className="text-center mt-5">This is a title</h1>
+          <h1 className="text-center mt-5">What Makes Us Different</h1>
           <hr style={{border: "0.5px solid red", width: "20%"}}></hr>
-          <p className="text-center" style={{marginLeft: "25%", marginRight: "25%" }}>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+          <p className="text-center" style={{marginLeft: "25%", marginRight: "25%" }}>
+            What makes our application different from others is the range of lessons we provide. Many other sites focus solely on a single topic but Simply Financial provides many lessons along with trivial quizzes at the end of each.
+            Further down the line we would love to add lesson games and user accounts but as we move onto our demo, we shall see the lessons provided at the moment. 
+          </p>
         </div>        
         <div class="containe text-center" style={{backgroundColor: "#e3f2fd"}}>
           <div style={{marginTop: "50px", backgroundColor: "#e3f2fd"}}>
           <h1 className="text-center">Co-Founders</h1>
         </div>
         <div class="row m-auto">
-          <div class="col-md mt-3">
+          <div class="col-md mt-3 mb-5">
             <img src={stepPic} style={{borderRadius:"20%", width: "120px", height: "150px"}}alt="Avatar"/>
             <h3 className="text-center" style={{marginTop:"15px"}}>Stephany Belendez</h3>
             <p style={pStyle}>Front-end Developer & UX Design</p>

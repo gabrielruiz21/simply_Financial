@@ -17,6 +17,7 @@ import logo from '../src/logo.png';
 import './App.css';
 import '../src/cards.scss'
 import QuizPage from './pages/QuizPage';
+import VideoPage from './pages/VideoPage';
 
 
 function Navigation(props) {
@@ -65,6 +66,7 @@ class App extends React.Component {
                 <Route path="/quizz/:id" component={ShowQuizPage}/>
                 <Route path="/create" component={PostFormPage} />
                 <Route path="/Learning-Center" component={LearningCenPage} />
+                <Route path="/Videos" component={VideoPage} />
                 <Route path="/" component={HomePage} />
               </Switch>
             </div>
