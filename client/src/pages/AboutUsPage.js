@@ -108,18 +108,21 @@ export default class AboutUsPage extends Component {
             <h3 className="text-center" style={{marginTop:"15px"}}>Stephany Belendez</h3>
             <p style={pStyle}>Front-end Developer & UX Design</p>
             <p style={pStyle}>CUNY Brooklyn College Fall 2020</p>
+            <p style={pStyle}>Email: stephanyb81@gmail.com</p>
           </div>
           <div class="col-md mt-3">
             <img src={estebanPic} style={{borderRadius:"20%", width: "120px", height: "150px"}}alt="Avatar"/>
             <h3 className="text-center" style={{marginTop:"15px"}}>Gabriel Ruiz</h3>
             <p style={pStyle}>Back-end Developer & Database Administrator</p>
             <p style={pStyle}>CUNY John Jay College Spring 2022</p>
+            <p style={pStyle}>Email: gabrielestebanruiz21@gmail.com</p>
           </div>
           <div class="col-md mt-3">
             <img src={AntonPic} style={{borderRadius:"20%", width: "120px", height: "155px"}}alt="Avatar"/>
             <h3 className="text-center" style={{marginTop:"15px"}}>Anton Marku</h3>
             <p style={pStyle}>Back-end Developer & Component Implementation</p>
             <p style={pStyle}>CUNY Hunter College Fall 2020</p>
+            <p style={pStyle}>Email: atnmku@gmail.com</p>
           </div>
         </div>
       </div>
