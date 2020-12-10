@@ -94,7 +94,7 @@ fixModal = () =>{
             </div>
             <div className="col ml-3 my-auto">
               <h5 className="card-title text-center mx-auto">{this.props.name}</h5>                               
-              <p className="text-left" style="font-size:1vw">{this.state.textArray[this.state.index]}</p>
+              <p className="text-left" style={{fontSize:"1vw"}}>{this.state.textArray[this.state.index]}</p>
             </div>
           </div>
           <div className="card-footer text-muted text-center">          
