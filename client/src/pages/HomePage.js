@@ -60,8 +60,8 @@ class HomePage extends React.Component {
 
       <div class="row section2">
         <div class="col-md-7 order-md-2">
-          <h1 class = "h1-sections">Grow...</h1>
-          <p class="p-sections">With the help of lessons and quizzes, you will grow your financial knowledge from a small seed into a beautiful flower! 
+          <h1 class = "h1-sections-2">Grow...</h1>
+          <p class="p-sections-2">With the help of lessons and quizzes, you will grow your financial knowledge from a small seed into a beautiful flower! 
             Not to mention also building up a strong word bank of new terms and topics!
           </p>
         </div>
