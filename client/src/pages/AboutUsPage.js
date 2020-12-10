@@ -90,13 +90,13 @@ export default class AboutUsPage extends Component {
             </div>          
         </div>
         <div>
-          <h1 className="text-center mt-5">This is a title</h1>
+          <h1 className="text-center mt-5">Our Mission</h1>
           <hr style={{border: "0.5px solid red", width: "20%"}}></hr>
-          <p className="text-center" style={{marginLeft: "25%", marginRight: "25%" }}>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+          <p className="text-center" style={{marginLeft: "25%", marginRight: "25%" }}>To create a simple, fun, and financial, learning environment.</p>
 
-          <h1 className="text-center mt-5">This is a title</h1>
+          <h1 className="text-center mt-5">About Us</h1>
           <hr style={{border: "0.5px solid red", width: "20%"}}></hr>
-          <p className="text-center" style={{marginLeft: "25%", marginRight: "25%" }}>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+          <p className="text-center" style={{marginLeft: "25%", marginRight: "25%" }}>Simply Financial is passionate in making financial education available to those who may not have the privilege to learn about it at home or in school. All individuals, whether younger or older, should have exposure to financial topics that may guide them into living better and financially stable lives. We allow our users to pick and choose the order in which they learn certain topics, as well as allowing them to preview the lesson quizzes without having to go through each lesson. We hope to educate, not only younger users, but all users who wish to learn more about finance.</p>
         </div>        
         <div class="containe text-center" style={{backgroundColor: "#e3f2fd"}}>
           <div style={{marginTop: "50px", backgroundColor: "#e3f2fd"}}>
