@@ -90,19 +90,13 @@ export default class AboutUsPage extends Component {
             </div>          
         </div>
         <div>
-          <h1 className="text-center mt-5">Who We Are</h1>
+          <h1 className="text-center mt-5">Our Mission</h1>
           <hr style={{border: "0.5px solid red", width: "20%"}}></hr>
-          <p className="text-center" style={{marginLeft: "25%", marginRight: "25%" }}>
-            Simply Financial is an online website that is targeted towards a younger audience and whose main goal is to teach them about the importance of finance in today’s world.
-            The idea of this project stems from the lack of financial literacy among our younger generation and we wanted to create something that is both fun and educational.
-          </p>
+          <p className="text-center" style={{marginLeft: "25%", marginRight: "25%" }}>To create a simple, fun, and financial, learning environment.</p>
 
-          <h1 className="text-center mt-5">What Makes Us Different</h1>
+          <h1 className="text-center mt-5">About Us</h1>
           <hr style={{border: "0.5px solid red", width: "20%"}}></hr>
-          <p className="text-center" style={{marginLeft: "25%", marginRight: "25%" }}>
-            What makes our application different from others is the range of lessons we provide. Many other sites focus solely on a single topic but Simply Financial provides many lessons along with trivial quizzes at the end of each.
-            Further down the line we would love to add lesson games and user accounts but as we move onto our demo, we shall see the lessons provided at the moment. 
-          </p>
+          <p className="text-center" style={{marginLeft: "25%", marginRight: "25%" }}>Simply Financial is passionate in making financial education available to those who may not have the privilege to learn about it at home or in school. All individuals, whether younger or older, should have exposure to financial topics that may guide them into living better and financially stable lives. We allow our users to pick and choose the order in which they learn certain topics, as well as allowing them to preview the lesson quizzes without having to go through each lesson. We hope to educate, not only younger users, but all users who wish to learn more about finance.</p>
         </div>        
         <div class="containe text-center" style={{backgroundColor: "#e3f2fd"}}>
           <div style={{marginTop: "50px", backgroundColor: "#e3f2fd"}}>
@@ -114,18 +108,21 @@ export default class AboutUsPage extends Component {
             <h3 className="text-center" style={{marginTop:"15px"}}>Stephany Belendez</h3>
             <p style={pStyle}>Front-end Developer & UX Design</p>
             <p style={pStyle}>CUNY Brooklyn College Fall 2020</p>
+            <p style={pStyle}>Email: stephanyb81@gmail.com</p>
           </div>
           <div class="col-md mt-3">
             <img src={estebanPic} style={{borderRadius:"20%", width: "120px", height: "150px"}}alt="Avatar"/>
             <h3 className="text-center" style={{marginTop:"15px"}}>Gabriel Ruiz</h3>
             <p style={pStyle}>Back-end Developer & Database Administrator</p>
             <p style={pStyle}>CUNY John Jay College Spring 2022</p>
+            <p style={pStyle}>Email: gabrielestebanruiz21@gmail.com</p>
           </div>
           <div class="col-md mt-3">
             <img src={AntonPic} style={{borderRadius:"20%", width: "120px", height: "155px"}}alt="Avatar"/>
             <h3 className="text-center" style={{marginTop:"15px"}}>Anton Marku</h3>
             <p style={pStyle}>Back-end Developer & Component Implementation</p>
             <p style={pStyle}>CUNY Hunter College Fall 2020</p>
+            <p style={pStyle}>Email: atnmku@gmail.com</p>
           </div>
         </div>
       </div>
